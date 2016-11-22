@@ -24,7 +24,7 @@ public class AppBoot extends AbstractAnnotationConfigDispatcherServletInitialize
 
 	@Override
 	protected String[] getServletMappings() {
-		return new String[] { "/*" };
+		return new String[] { "/" };
 	}
 
 	@Override
