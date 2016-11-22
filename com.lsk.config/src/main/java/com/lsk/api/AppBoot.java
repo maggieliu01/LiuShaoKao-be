@@ -14,7 +14,7 @@ public class AppBoot extends AbstractAnnotationConfigDispatcherServletInitialize
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class[] { App.class, SecurityConfig.class };
+		return new Class[] { App.class};
 	}
 
 	@Override
@@ -24,7 +24,7 @@ public class AppBoot extends AbstractAnnotationConfigDispatcherServletInitialize
 
 	@Override
 	protected String[] getServletMappings() {
-		return new String[] { "/*" };
+		return new String[] { "/" };
 	}
 
 	@Override

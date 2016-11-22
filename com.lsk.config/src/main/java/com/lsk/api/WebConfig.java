@@ -24,10 +24,10 @@ import com.lsk.api.interceptors.CustomizedInterceptor;
  */
 
 @Configuration
-@ComponentScan(basePackages = WebConfig.BASED_PACKAGE)
+@ComponentScan(basePackages = "com.lsk")
 @EnableWebMvc
 public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationContextAware {
-	public static final String BASED_PACKAGE = "ocm.lsk.api";
+	//public static final String BASED_PACKAGE = "com.lsk.api";
 
 	private ApplicationContext applicationContext;
 
@@ -58,8 +58,8 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
 	public ViewResolver getViewResolver(){
 		InternalResourceViewResolver viewResolver=new InternalResourceViewResolver();
 		viewResolver.setApplicationContext(this.applicationContext);
+		viewResolver.setPrefix("/WEB-INF/");
 		viewResolver.setSuffix(".html");
-		viewResolver.setPrefix("/WEB-INF/views");
 		return viewResolver; 
 	}
 

@@ -4,7 +4,7 @@
 
 	<artifactId>com.lsk.admin.api</artifactId>
 	<packaging>war</packaging>
-	
+
 	<parent>
 		<groupId>LSK</groupId>
 		<artifactId>com.lsk.parent</artifactId>
@@ -16,7 +16,11 @@
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
-
+		<dependency>
+			<groupId>LSK</groupId>
+			<artifactId>com.lsk.config</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>com.lsk.admin.api</finalName>

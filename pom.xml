@@ -16,7 +16,6 @@
 	</properties>
 
 	<modules>
-		<module>com.lsk</module>
 		<module>com.lsk.admin.api</module>
 		<module>com.lsk.android.api</module>
 		<module>ocm.lsk.config</module>
