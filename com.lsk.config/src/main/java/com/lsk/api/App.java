@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Configuration;
  *
  */
 @Configuration
-@ComponentScan(basePackages = App.SCAN_PACKAGE)
+@ComponentScan(basePackages={"com.lsk.api","com.lsk.admin.api","ocm.lsk.android.api"})
 public class App 
 {
-	public static final String SCAN_PACKAGE="com.lsk.api";
+	
 }
