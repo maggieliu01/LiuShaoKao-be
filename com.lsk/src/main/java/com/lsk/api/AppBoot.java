@@ -3,6 +3,8 @@ package com.lsk.api;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.request.RequestContextListener;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
@@ -10,6 +12,8 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
  * @author I326998
  */
 
+@Configuration
+@ComponentScan(basePackages="com.lsk.api")
 public class AppBoot extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override

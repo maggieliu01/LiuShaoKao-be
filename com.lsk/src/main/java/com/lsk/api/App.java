@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan(basePackages = App.SCAN_PACKAGE)
-public class App 
-{
-	public static final String SCAN_PACKAGE="com.lsk.api";
+public class App {
+	public static final String SCAN_PACKAGE = "com.lsk.api";
 }
