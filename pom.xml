@@ -5,7 +5,7 @@
 
 	<groupId>LSK</groupId>
 	<artifactId>com.lsk.parent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${com.lsk.version}</version>
 	<packaging>pom</packaging>
 
 	<name>com.lsk.parent</name>
@@ -13,12 +13,14 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<com.lsk.version>0.0.1-SNAPSHOT</com.lsk.version>
+		<jdk.version>1.8</jdk.version>
 	</properties>
 
 	<modules>
+		<module>com.lsk.config</module>
 		<module>com.lsk.admin.api</module>
 		<module>com.lsk.android.api</module>
-		<module>ocm.lsk.config</module>
 	</modules>
 
 	<dependencies>
@@ -30,33 +32,12 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
-		<!-- <dependency> -->
-		<!-- <groupId>org.springframework</groupId> -->
-		<!-- <artifactId>spring-web</artifactId> -->
-		<!-- <version>4.3.2.RELEASE</version> -->
-		<!-- </dependency> -->
-
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
-		<!-- <dependency> -->
-		<!-- <groupId>org.springframework.boot</groupId> -->
-		<!-- <artifactId>spring-boot-starter-web</artifactId> -->
-		<!-- <version>1.4.1.RELEASE</version> -->
-		<!-- </dependency> -->
-
 		<!-- Web Container -->
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-catalina</artifactId>
 			<version>8.5.2</version>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
-		<!-- <dependency> -->
-		<!-- <groupId>org.springframework</groupId> -->
-		<!-- <artifactId>spring-core</artifactId> -->
-		<!-- <version>4.3.3.RELEASE</version> -->
-		<!-- </dependency> -->
 
 		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
 		<dependency>
@@ -66,4 +47,20 @@
 		</dependency>
 
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
